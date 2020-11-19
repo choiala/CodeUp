@@ -1,0 +1,21 @@
+# list numbers 
+# numbers[0]부터 numbers[i]까지 더하기
+# 입력 받은 리스트 다 더한 값을  answer에 넣기
+# 출력 answer
+
+numbers = list(map(int, input().split()))
+result = 0  
+
+def solution(numbers):
+    answer = []
+    dump_answer = []
+    for i in range(len(numbers)) : # numbers라는 배열 한 번만 돎
+        for j in range(i+1, len(numbers)) :
+          result = numbers[i] + numbers[j]
+#        result =+ numbers[i]
+          dump_answer.append(result) 
+        # 중복 제거 후 (set()) 오름차순 정렬 (sorted()) 必  
+    answer = list(set(sorted(dump_answer)))   
+    return answer
+
+print(solution(numbers))
