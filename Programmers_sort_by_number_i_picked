@@ -1,0 +1,4 @@
+words = list(map(str,input().split()))
+n = int(input())
+
+print(sorted(words,key = lambda x:x[n])]) # 같은 문자 일 때 ?
